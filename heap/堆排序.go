@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func heapSort(nums []int) []int {
 	// 构建大顶堆
 	for i := len(nums)/2 - 1; i >= 0; i-- {
@@ -34,9 +32,9 @@ func heapify(nums []int, i, n int) {
 }
 func findKthLargest(nums []int, k int) int {
 	nums = heapSort(nums)
-    return nums[len(nums)-k] 
+	return nums[len(nums)-k]
 }
 
-func main() {
-	fmt.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2)) // 输出 5
-}
+//func main() {
+//	fmt.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2)) // 输出 5
+//}
